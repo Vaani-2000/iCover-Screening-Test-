@@ -1,0 +1,38 @@
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#include <queue>
+#include <map>
+#include <vector>
+#include <stack>
+#include <algorithm>
+using namespace std;
+#define INF 0x3f3f3f3f
+#define CLR(a,b) memset(a,b,sizeof(a))
+#define LL long long
+#define PI acos(-1.0)
+int cal(int x)
+{
+	int a = x/3;
+	int b = x% 3;
+	if (b != 0)
+		return a * 2 + b-1;
+	else
+		return a * 2;
+}
+int main()
+{
+	int u;
+	int Case = 1;
+	int l,r;
+	scanf ("%d",&u);
+	while (u--)
+	{
+		scanf ("%d %d",&l,&r);
+		printf ("Case %d: ",Case++);
+		int ans = 0;
+		ans += cal(r)-cal(l-1);
+		printf ("%d\n",ans);
+}
+	return 0;
+}
