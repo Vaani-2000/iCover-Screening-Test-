@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t,i,j,k,flag=1;
+    char n[20];
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        flag=1;
+        scanf(“%s”,n);
+        for(j=0,k=strlen(n)–1;k>=j;j++)
+        {
+            if(n[j]!=n[k–j])
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1) cout<<“Case “<<i<<“: Yes\n“;
+        else cout<<“Case “<<i<<“: No\n“;
+    }
+    return 0;
+}
